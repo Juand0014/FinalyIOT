@@ -1,0 +1,65 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: steelblue;
+}
+
+h1 {
+	margin-top: 10px;
+	color: #ff0000;
+}
+
+label {
+	position: relative;
+	width: 200px;
+	height: 200px;
+	cursor: pointer;
+	border-radius: 50%;
+}
+
+label .btn {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: #121c3f;
+	border-radius: 50%;
+
+	box-shadow: 0 6px 6px rgb(24, 211, 55), inset 0 -4px 10px rgba(0, 0, 0, 1),
+		inset 0 4px 4px rgb(13, 192, 43), 0 0 0 4px #000, 0 0 0 10px #0c0c0c, 0 0 0 10px #080808;
+}
+
+label input[type='button'] {
+	-webkit-appearance: none;
+}
+
+label .fa {
+	position: absolute;
+	top: 30%;
+	left: 30%;
+	transform: tranlate(-30%, -30%);
+	font-size: 5em;
+	color: rgb(24, 211, 55);
+}
+
+label input[type='button']:active ~ .btn {
+	box-shadow: 0 0 0 rgba(0, 0, 0, 1), inset 0 -2px 10px rgba(0, 0, 0, 1),
+		inset 0 2px 2px rgba(24, 211, 55), 0 0 0 4px #000, 0 0 0 10px #ff0000, 0 0 0 10px #ff0000;
+}
+label input[type='button']:active ~ .fa {
+	color: #ff0000;
+}
+
+label input[type='checkbox']:active ~ .fa {
+	color: #ff0000;
+	text-shadow: 0 0 15px #ff0000, 0 0 30px #ff0000;
+}
